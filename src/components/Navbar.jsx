@@ -22,7 +22,7 @@ const Navbar = () => {
 
     const logoutHandler= async ()=>{
         try {
-            const res= await axios.post(`${process.env.BACKEND_BASEURL}/user/logout`, {},{
+            const res= await axios.post(`${import.meta.env.VITE_REACT_BACKEND_BASEURL}/user/logout`, {},{
                 headers: {
                     Authorization: `Bearer ${accessToken}`
                 }
