@@ -40,7 +40,7 @@ function Login() {
     console.log(formData);
     try {
       setIsLoading(true);
-      const res = await axios.post(`http://localhost:8000/user/login`, formData, {
+      const res = await axios.post(`${process.env.BACKEND_BASEURL}/user/login`, formData, {
         headers: {
           "Content-Type": "application/json"
         }

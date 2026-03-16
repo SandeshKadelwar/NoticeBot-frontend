@@ -38,7 +38,7 @@ function Signup() {
     console.log(formData);
     try {
       setIsLoading(true);
-      const res = await axios.post(`http://localhost:8000/user/register`, formData, {
+      const res = await axios.post(`${process.env.BACKEND_BASEURL}/user/register`, formData, {
         headers: {
           "Content-Type": "application/json"
         }
