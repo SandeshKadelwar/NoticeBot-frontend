@@ -11,7 +11,7 @@ const Verify = () => {
     useEffect(()=>{
         const VerifyEmail= async()=>{
             try {
-                const res= await axios.post(`${process.env.BACKEND_BASEURL}/user/verify`, {}, {
+                const res= await axios.post(`${import.meta.env.VITE_BACKEND_BASEURL}/user/verify`, {}, {
                     headers:{
                         Authorization: `Bearer ${token}`
                     }
