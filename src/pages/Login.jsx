@@ -48,7 +48,7 @@ function Login() {
       if (res.data.success) {
         setUser(res.data.user);
         localStorage.setItem('accessToken', res.data.accessToken);
-        navigate('/home');
+        navigate('/');
         
         toast.success(res.data.message);
 
