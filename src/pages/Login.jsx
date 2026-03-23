@@ -48,8 +48,9 @@ function Login() {
       if (res.data.success) {
         setUser(res.data.user);
         localStorage.setItem("token", res.data.token);
+        setUser({});   // 🔥 ADD THIS LINE
         navigate('/');
-        
+
         toast.success(res.data.message);
 
       }
